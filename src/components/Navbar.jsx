@@ -19,15 +19,12 @@ const Navbar = () => {
         </div>
         <div  onClick={()=>setOpen(!open)}
         className={`text-3xl absolute cursor-pointer right-8 z-30 top-6 md:hidden`}>
-          {open? <MdOutlineClose></MdOutlineClose>:<CiMenuBurger></CiMenuBurger>}
+          {!open && <CiMenuBurger></CiMenuBurger>}
         
         </div>
       </div>
       <ul className='md:flex hidden uppercase items-center gap-8 font-logo '>
         <li>
-          <Link to='/home' className='py-4 px-3 inline-block text-[#FFD1E3] hover:underline' >
-            Home
-          </Link>
         </li>
         <NavLinks />
       </ul>
@@ -41,9 +38,10 @@ const Navbar = () => {
         duration-500 ${open ? "right-0" : "right-[-100%]"}
         `}>
       <li>
-          <Link to='/home' className='py-3 px-3 inline-block text-[#FFD1E3] ' >
-            Home
-          </Link>
+        <div onClick={()=>setOpen(!open)} className='text-3xl absolute cursor-pointer right-8 z-30 top-6 md:hidden'>
+
+          <MdOutlineClose></MdOutlineClose>
+        </div>
         </li>
         <NavLinks />
         <div className='py-5'>

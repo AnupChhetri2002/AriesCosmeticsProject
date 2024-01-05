@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 const NavLinks = () => {
     const navigate = useNavigate();
     const links=[
+        {name:'Home',link:"/home"},
         {name:'About',link:"/About"},
         {name:'Shop',link:"/Shop"},
         {name:'Blog',link:"/blog"},
