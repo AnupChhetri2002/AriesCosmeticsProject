@@ -13,6 +13,8 @@ module.exports = {
         'logo': ['Poppins']
         ,
         'logo2': "AnandaBlack",
+        'logo3': "MyFont",
+        'boldFont': "BoldFont",
         
       },
       keyframes: {

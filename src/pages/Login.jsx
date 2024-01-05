@@ -63,7 +63,7 @@ const Login = () => {
                 type="submit"
                 className="bg-blue-500 hover:bg-blue-600 p-3 text-xl text-white fw-fw-bolder w-full rounded-md text-center "
               >
-                {isSubmitting ? "creating...." : "Login"}
+                {isSubmitting ? "Logging in...." : "Login"}
               </button>
               <div className="my-3">
                 

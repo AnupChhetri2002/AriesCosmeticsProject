@@ -6,13 +6,18 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Shop from "./pages/Shop.jsx";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Gallery from "./pages/Gallery.jsx";
 import AnimatedText from "./components/AnimatedText.jsx";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [urlName,setUrlName] = useState('')
 
+  useEffect(()=>{
+
+  },[])
+  
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -34,7 +39,7 @@ function App() {
             <Route path="/Register" element={<Register />} />
             <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="/About" element={<About />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/Home" element={<Home />} />
             <Route path="/Gallery" element={<Gallery />} />
             <Route path="/Shop" element={<Shop />} />
           </Routes>
