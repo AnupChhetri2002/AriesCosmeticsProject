@@ -9,6 +9,7 @@ import Shop from "./pages/Shop.jsx";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Gallery from "./pages/Gallery.jsx";
 import AnimatedText from "./components/AnimatedText.jsx";
+import Home2 from "./pages/Home2.jsx";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -27,7 +28,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
 
-      <div>
+      <div className="overflow-hidden">
         <div className={`${!loading && " hidden "}`}>
           <div className=" w-full h-[36rem] flex items-center justify-center">
             <AnimatedText />
@@ -42,6 +43,9 @@ function App() {
             <Route path="/Home" element={<Home />} />
             <Route path="/Gallery" element={<Gallery />} />
             <Route path="/Shop" element={<Shop />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/home2" element={<Home2 />} />
+
         
 
           </Routes>

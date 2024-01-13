@@ -9,42 +9,44 @@ const Navbar = () => {
   return (
     
    <nav className='bg-[#A367B1]  '>
-    <div className=' flex items-center font-medium justify-around'>
-      <div className='z-[-10rem] p-5 md:w-auto w-full flex justify-between '>
-      <div
-          className="md:cursor-pointer h-16  "
-        />
-        <div className='flex justify-center items-center absolute'>
-        <h1 className='font-logo2 md:text-3xl text-2xl md:mt-3  text-[#f6c356]'>AERIES</h1>
+    <div className=' flex  font-medium justify-around '>
+      <div className='z-[-10rem] p-5 mini:w-auto w-full flex justify-between '>
+      <div className="md:cursor-pointer h-11 w-[5.1rem] ">
+        <Link to='/home'>
+          <div className='flex justify-center items-center absolute '>
+            <h1 className='font-logo2 text-xl mini:text-2xl mt-3  text-[#f6c356]'>AERIES</h1>
+          </div>
+        </Link>
         </div>
         <div  onClick={()=>setOpen(!open)}
-        className={`text-3xl absolute cursor-pointer right-8 z-30 top-6 md:hidden`}>
+        className={`text-3xl absolute cursor-pointer right-8 z-30 top-6 mini:hidden `}>
           {!open && <CiMenuBurger></CiMenuBurger>}
-        
         </div>
-      </div>
-      <ul className='md:flex hidden uppercase items-center gap-8 font-logo '>
+        </div>
+     
+      <ul className='mini:flex hidden uppercase items-center gap-8 font-logo '>
         <li>
         </li>
         <NavLinks />
       </ul>
-      <div className='md:block hidden'>
+      <div className='mini:block hidden '>
         <Button />
       </div>
       {/* Mobile Responsive */}
       <ul
           className={`
-        md:hidden bg-[#6b5e78] fixed w-[50%] top-0 z-20 overflow-y-auto bottom-0 py-4 pl-4
-        duration-500 ${open ? "right-0" : "right-[-100%]"}
+        mini:hidden flex-row  bg-[#6b5e78] fixed w-[40%] hover:underline opacity-60 top-0 z-20 overflow-y-auto bottom-0 py-4 pl-4
+        duration-500 ${open ? "right-0" : "right-[-100%] bg-[#A367B1]"}
         `}>
       <li>
-        <div onClick={()=>setOpen(!open)} className='text-3xl absolute cursor-pointer right-8 z-30 top-6 md:hidden'>
+        <div onClick={()=>setOpen(!open)} className='text-3xl absolute cursor-pointer right-8 z-30 top-6 mini:hidden 
+        flex '>
 
           <MdOutlineClose></MdOutlineClose>
         </div>
         </li>
         <NavLinks />
-        <div className='py-5'>
+        <div className='py-5 flex'>
           <Button />
         </div>
       </ul>

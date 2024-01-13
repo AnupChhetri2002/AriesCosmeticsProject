@@ -29,6 +29,11 @@ module.exports = {
           '100%': { transform: 'translateY(0px)' },
         },
       },
+      screens: {
+        "mini": "1100px",
+        "mobile": "640px",
+      },
+
       animation: {
         'wavingU': 'waveUp 2s infinite',
         'wavingD': 'waveDown 2s infinite',

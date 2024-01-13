@@ -23,7 +23,7 @@ const NavLinks = () => {
     {
         links.map(link=>(
             <div key={link.name}>
-                <div key={link.name} className='px-3 text-left md:cursor-pointer text-[#FFD1E3] hover:underline'>
+                <div key={link.name} className='px-3 text-left cursor-pointer text-[#75df4b] hover:underline text-xl mini:flex mini:text-xl  '>
                     <div className='py-4'>
                         <div onClick={()=>sendTo(link.link)}>
                         {link.name}
