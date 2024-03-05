@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1900);
+    }, 0);
   }, []);
   return (
     <BrowserRouter>
